@@ -1,35 +1,22 @@
-import React, { Component } from "react";
+import React from "react";
 import "./FeedbackOptions.css";
 import propTypes from "prop-types";
 
-class FeedbackOptions extends Component {
-  render() {
-    return (
-      <>
+function FeedbackOptions({ onLeaveFeedback, options }) {
+  return (
+    <>
+      {options.map(vote =>
         <button
           type="button"
           className="feedback__btn"
-          onClick={() => this.props.onLeaveFeedback("good")}
+          onClick={() => onLeaveFeedback(vote)}
         >
-          Good
+          {vote}
         </button>
-        <button
-          type="button"
-          className="feedback__btn"
-          onClick={() => this.props.onLeaveFeedback("neutral")}
-        >
-          Neutral
-        </button>
-        <button
-          type="button"
-          className="feedback__btn"
-          onClick={() => this.props.onLeaveFeedback("bad")}
-        >
-          Bad
-        </button>
-      </>
-    );
-  }
+      )
+      }
+    </>
+  )
 }
 
 FeedbackOptions.propTypes = {
