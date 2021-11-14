@@ -1,0 +1,12 @@
+.statistics__list {
+  display: inline-block;
+  list-style: none;
+  font-size: 14px;
+  line-height: 1.2;
+  letter-spacing: 0.03em;
+  font-weight: 500;
+  width: 300px;
+}
+.statistics__list > li:not(:last-child) {
+  margin-bottom: 20px;
+}

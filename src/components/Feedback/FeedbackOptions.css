@@ -1,0 +1,22 @@
+.feedback__btn {
+  background-color: #ffff;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  color: #000;
+  padding: 5px 10px;
+  font-size: 12px;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.feedback__btn:not(:last-child) {
+  margin-right: 5px;
+}
+
+.feedback__btn:hover,
+.feedback__btn:focus {
+  color: #ffff;
+  background-color: rgb(86, 86, 233);
+}
