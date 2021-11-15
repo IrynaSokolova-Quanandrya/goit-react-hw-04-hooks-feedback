@@ -11,7 +11,6 @@ function Feedback() {
   const [bad, setBad] = useState(null);
 
   const leaveFeedback = (vote) => {
-    console.log(vote);
     switch (vote) {
       case 'good':
         setGood(prev => prev + 1);

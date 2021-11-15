@@ -2,6 +2,7 @@ import React from "react";
 import propTypes from "prop-types";
 
 function Section({ title, children }) {
+  console.log({ title, children });
   return (
     <section>
       <h1 className="feedback__title">{title}</h1>

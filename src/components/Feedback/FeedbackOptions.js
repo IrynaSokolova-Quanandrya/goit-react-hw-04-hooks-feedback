@@ -7,6 +7,7 @@ function FeedbackOptions({ onLeaveFeedback, options }) {
     <>
       {options.map(vote =>
         <button
+          key={vote}
           type="button"
           className="feedback__btn"
           onClick={() => onLeaveFeedback(vote)}
