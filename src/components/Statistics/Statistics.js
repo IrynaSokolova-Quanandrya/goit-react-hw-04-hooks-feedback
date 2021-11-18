@@ -1,9 +1,12 @@
+/** @format */
+
 import React from "react";
-import "./Statistics.css";
+import s from "./Statistics.module.css";
+import propTypes from "prop-types";
 
 function Statistics({ good, neutral, bad, total, positivePercentage }) {
   return (
-    <ul className="statistics__list">
+    <ul className={s.statistics__list}>
       <li>Good:{good}</li>
       <li>Neutral: {neutral} </li>
       <li>Bad: {bad} </li>
@@ -13,4 +16,11 @@ function Statistics({ good, neutral, bad, total, positivePercentage }) {
   );
 }
 
+Statistics.propTypes = {
+  good: propTypes.number,
+  neutral: propTypes.number,
+  bad: propTypes.number,
+  total: propTypes.number,
+  positivePercentage: propTypes.number,
+};
 export default Statistics;
